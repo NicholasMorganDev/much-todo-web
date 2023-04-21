@@ -10,6 +10,10 @@ export default function ToDoList ({ loading, itemList, setItemList, setLoading }
       .catch(alert) //we can do better
       .finally(() => setLoading(false))
   }, [])
+  
+  const handleDone = (task) => {
+
+  }
 
   return (
     <section>

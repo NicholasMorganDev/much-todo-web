@@ -4,7 +4,7 @@ import { Input } from "antd";
 export default function Header ({setItemList, setLoading}) {
   const handleAdd = async (value) => {
     if(value.length < 3) return
-    
+
     setLoading(true)
 
     const newItem = { //req.body
@@ -22,6 +22,8 @@ export default function Header ({setItemList, setLoading}) {
     const data = await response.json()
     setItemList(data)
     setLoading(false)
+    //reset value = ''
+    //accepts true values
   }
   return (
     <header>
